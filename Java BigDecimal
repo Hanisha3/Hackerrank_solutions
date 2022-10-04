@@ -1,0 +1,48 @@
+Java BigDecimal
+---------------
+
+Input Format
+
+The first line consists of a single integer, , denoting the number of integer strings.
+Each line  of the  subsequent lines contains a real number denoting the value of .
+
+Constraints
+
+Each  has at most  digits.
+Output Format
+
+Locked stub code in the editor will print the contents of array  to stdout. You are only responsible for reordering the array's elements.
+
+Sample Input
+9
+-100
+50
+0
+56.6
+90
+0.12
+.12
+02.34
+000.000
+Sample Output
+90
+56.6
+50
+02.34
+0.12
+.12
+0
+000.000
+-100
+
+
+SOLUTION
+--------
+
+        //Write your code here
+        Arrays.sort(s, 0, n, (a, b) -> {
+                BigDecimal a1 = new BigDecimal(a);
+                BigDecimal b1 = new BigDecimal(b);
+                return b1.compareTo(a1);
+            }
+        );
